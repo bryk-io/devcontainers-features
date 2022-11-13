@@ -1,0 +1,15 @@
+{
+  "name": "Live Share",
+  "id": "live-share",
+  "version": "1.0.0",
+  "description": "Live Share enables you to quickly collaborate while coding",
+  "documentationURL": "https://code.visualstudio.com/learn/collaboration/live-share",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vsliveshare.vsliveshare",
+        "ms-vsliveshare.vsliveshare-pack"
+      ]
+    }
+  }
+}

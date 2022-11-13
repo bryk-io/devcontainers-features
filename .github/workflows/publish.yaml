@@ -1,0 +1,20 @@
+name: "publish"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  publish:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "publish features"
+        uses: devcontainers/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          publish-features: "true"
+          base-path-to-features: "./src"
+          generate-docs: "false"
