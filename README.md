@@ -17,10 +17,9 @@ declared in the [`./src`](./src) directory of this repository.
 "image": "mcr.microsoft.com/devcontainers/base:debian",
 "features": {
   "ghcr.io/devcontainers/features/go:1": {
-      "version": "1.19"
+      "version": "1.21"
   },
-  "ghcr.io/bryk-io/devcontainers-features/protobuf-tools:1": {
-    "bufVersion": "1.9.0"
-  }
+  "ghcr.io/bryk-io/devcontainers-features/protobuf-tools:1.17.0": {},
+  "ghcr.io/bryk-io/devcontainers-features/live-share:1": {}
 }
 ```

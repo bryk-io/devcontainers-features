@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/sh
+set -e
 
 # Determine the appropriate non-root user
 if [ "${USERNAME}" = "auto" ] || [ "${USERNAME}" = "automatic" ]; then
