@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/bash
 set -e
 
 # Clean up
@@ -10,7 +9,8 @@ if [ "$(id -u)" -ne 0 ]; then
   exit 1
 fi
 
-# Ensure that login shells get the correct path if the user updated the PATH using ENV.
+# Ensure that login shells get the correct path if the user updated
+# the PATH using ENV.
 rm -f /etc/profile.d/00-restore-env.sh
 echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-restore-env.sh
 chmod +x /etc/profile.d/00-restore-env.sh
@@ -35,21 +35,22 @@ fi
 echo -e "Activating feature: 'protobuf-tools'"
 
 # buf
-BUF_VERSION=${BUFVERSION:-1.9.0}
+BUF_VERSION="1.17.0"
 echo -e "Installnig buf: $BUF_VERSION"
 curl -sSL \
     "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
 
 # protoc-plugins
 echo -e "Installing protoc plugins"
-PROTOC_GRPC_GATEWAY="2.12.0"
-PROTOC_GEN_GO_GRPC="1.2.0"
-PROTOC_GEN_VALIDATE="0.6.13"
-PROTOC_GEN_GO="1.28.1"
-PROTOC_GEN_DRPC="0.0.32"
-PROTOC_GEN_ENT="0.3.3"
+PROTOC_GRPC_GATEWAY="2.15.2"
+PROTOC_GEN_GO_GRPC="1.3.0"
+PROTOC_GEN_VALIDATE="1.0.2"
+PROTOC_GEN_GO="1.31.0"
+PROTOC_GEN_DRPC="0.0.33"
+PROTOC_GEN_ENT="0.4.5"
 GO_TOOLS="\
   golang.org/x/tools/cmd/goimports@latest \
+  golang.org/x/vuln/cmd/govulncheck@latest \
   github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v${PROTOC_GRPC_GATEWAY} \
   github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v${PROTOC_GRPC_GATEWAY} \
   google.golang.org/grpc/cmd/protoc-gen-go-grpc@v${PROTOC_GEN_GO_GRPC} \

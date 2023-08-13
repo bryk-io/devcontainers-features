@@ -1,19 +1,8 @@
 {
   "name": "Protobuf Tools",
   "id": "protobuf-tools",
-  "version": "1.0.0",
-  "description": "Tools and plugin useful to compile and work with protocol buffers",
-  "options": {
-    "bufVersion": {
-      "type": "string",
-      "enum": [
-        "1.9.0",
-        "1.8.0"
-      ],
-      "default": "1.9.0",
-      "description": "Buf compiler version"
-    }
-  },
+  "version": "1.17.0",
+  "description": "Tools and plugins useful to compile and work with protocol buffers",
   "installsAfter": [
     "ghcr.io/devcontainers/features/go:1"
   ],
