@@ -19,7 +19,7 @@ declared in the [`./src`](./src) directory of this repository.
   "ghcr.io/devcontainers/features/go:1": {
       "version": "1.21"
   },
-  "ghcr.io/bryk-io/devcontainers-features/protobuf-tools:1.17.0": {},
+  "ghcr.io/bryk-io/devcontainers-features/protobuf-tools:1.28.1": {},
   "ghcr.io/bryk-io/devcontainers-features/live-share:1": {},
   "ghcr.io/bryk-io/devcontainers-features/graphql-tools:1": {}
 }

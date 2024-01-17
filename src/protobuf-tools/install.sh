@@ -35,17 +35,17 @@ fi
 echo -e "Activating feature: 'protobuf-tools'"
 
 # buf
-BUF_VERSION="1.17.0"
+BUF_VERSION="1.28.1"
 echo -e "Installnig buf: $BUF_VERSION"
 curl -sSL \
     "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
 
 # protoc-plugins
 echo -e "Installing protoc plugins"
-PROTOC_GRPC_GATEWAY="2.15.2"
+PROTOC_GRPC_GATEWAY="2.18.1"
 PROTOC_GEN_GO_GRPC="1.3.0"
 PROTOC_GEN_VALIDATE="1.0.2"
-PROTOC_GEN_GO="1.31.0"
+PROTOC_GEN_GO="1.32.0"
 PROTOC_GEN_DRPC="0.0.33"
 PROTOC_GEN_ENT="0.4.5"
 GO_TOOLS="\

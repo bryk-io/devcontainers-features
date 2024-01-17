@@ -3,14 +3,10 @@
   "id": "graphql-tools",
   "version": "1.0.0",
   "description": "Tools to auto-generate GraphQL server and client code",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/go:1"
-  ],
+  "installsAfter": ["ghcr.io/devcontainers/features/go:1"],
   "customizations": {
     "vscode": {
-      "extensions": [
-        "kumar-harsh.graphql-for-vscode"
-      ]
+      "extensions": ["kumar-harsh.graphql-for-vscode"]
     }
   }
 }

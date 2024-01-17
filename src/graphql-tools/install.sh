@@ -34,8 +34,8 @@ fi
 
 echo -e "Activating feature: 'graphql-tools'"
 echo -e "Installing tools"
-GQLGEN="0.17.36"
-GQLGENC="0.14.0"
+GQLGEN="0.17.42"
+GQLGENC="0.16.2"
 GO_TOOLS="\
   github.com/99designs/gqlgen@v${GQLGEN} \
   github.com/Yamashou/gqlgenc@v${GQLGENC}"
