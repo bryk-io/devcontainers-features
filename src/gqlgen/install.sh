@@ -32,32 +32,11 @@ elif [ "${USERNAME}" = "none" ] || ! id -u ${USERNAME} > /dev/null 2>&1; then
   USERNAME=root
 fi
 
-echo -e "Activating feature: 'protobuf-tools'"
-
-# buf
-BUF_VERSION="1.28.1"
-echo -e "Installnig buf: $BUF_VERSION"
-curl -sSL \
-    "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
-
-# protoc-plugins
-echo -e "Installing protoc plugins"
-PROTOC_GRPC_GATEWAY="2.18.1"
-PROTOC_GEN_GO_GRPC="1.3.0"
-PROTOC_GEN_VALIDATE="1.0.2"
-PROTOC_GEN_GO="1.32.0"
-PROTOC_GEN_DRPC="0.0.33"
-PROTOC_GEN_ENT="0.4.5"
+echo -e "Activating feature: 'gqlgen'"
+echo -e "Installing tools"
+GQLGEN="0.17.42"
 GO_TOOLS="\
-  golang.org/x/tools/cmd/goimports@latest \
-  golang.org/x/vuln/cmd/govulncheck@latest \
-  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v${PROTOC_GRPC_GATEWAY} \
-  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v${PROTOC_GRPC_GATEWAY} \
-  google.golang.org/grpc/cmd/protoc-gen-go-grpc@v${PROTOC_GEN_GO_GRPC} \
-  github.com/envoyproxy/protoc-gen-validate@v${PROTOC_GEN_VALIDATE} \
-  google.golang.org/protobuf/cmd/protoc-gen-go@v${PROTOC_GEN_GO} \
-  storj.io/drpc/cmd/protoc-gen-go-drpc@v${PROTOC_GEN_DRPC} \
-  entgo.io/contrib/entproto/cmd/protoc-gen-ent@v${PROTOC_GEN_ENT}"
+  github.com/99designs/gqlgen@v${GQLGEN}"
 export PATH=/go/bin:${PATH}
 mkdir -p /tmp/gotools /usr/local/etc/vscode-dev-containers /go/bin
 cd /tmp/gotools

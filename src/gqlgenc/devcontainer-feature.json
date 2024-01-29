@@ -1,0 +1,14 @@
+{
+  "name": "gqlgenc",
+  "id": "gqlgenc",
+  "version": "0.16.2",
+  "description": "Tools for creating strictly typed GraphQL clients in Go",
+  "documentationURL": "https://github.com/Yamashou/gqlgenc",
+  "licenseURL": "https://github.com/Yamashou/gqlgenc/blob/master/LICENSE",
+  "installsAfter": ["ghcr.io/devcontainers/features/go:1"],
+  "customizations": {
+    "vscode": {
+      "extensions": ["kumar-harsh.graphql-for-vscode"]
+    }
+  }
+}

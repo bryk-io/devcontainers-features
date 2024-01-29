@@ -19,8 +19,9 @@ declared in the [`./src`](./src) directory of this repository.
   "ghcr.io/devcontainers/features/go:1": {
       "version": "1.21"
   },
-  "ghcr.io/bryk-io/devcontainers-features/protobuf-tools:1.28.1": {},
+  "ghcr.io/bryk-io/devcontainers-features/buf:1.29.0": {},
   "ghcr.io/bryk-io/devcontainers-features/live-share:1": {},
-  "ghcr.io/bryk-io/devcontainers-features/graphql-tools:1": {}
+  "ghcr.io/bryk-io/devcontainers-features/gqlgen:0.17.42": {},
+  "ghcr.io/bryk-io/devcontainers-features/gqlgenc:0.16.2": {}
 }
 ```
