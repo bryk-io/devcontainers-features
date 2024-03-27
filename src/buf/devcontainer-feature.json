@@ -1,7 +1,7 @@
 {
   "name": "Buf",
   "id": "buf",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "description": "Tools and plugins useful to compile and work with protocol buffers",
   "installsAfter": ["ghcr.io/devcontainers/features/go:1"],
   "customizations": {

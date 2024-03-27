@@ -35,27 +35,20 @@ fi
 echo -e "Activating feature: 'buf'"
 
 # buf
-BUF_VERSION="1.29.0"
+BUF_VERSION="1.30.0"
 echo -e "Installnig buf: $BUF_VERSION"
 curl -sSL \
     "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
 
 # protoc-plugins
 echo -e "Installing protoc plugins"
-PROTOC_GRPC_GATEWAY="2.19.0"
-PROTOC_GEN_GO_GRPC="1.3.0"
-PROTOC_GEN_VALIDATE="1.0.2"
-PROTOC_GEN_GO="1.32.0"
-PROTOC_GEN_DRPC="0.0.33"
+# https://github.com/storj/drpc
+PROTOC_GEN_DRPC="0.0.34"
+# https://pkg.go.dev/entgo.io/contrib/entproto/cmd/protoc-gen-ent
 PROTOC_GEN_ENT="0.4.5"
 GO_TOOLS="\
   golang.org/x/tools/cmd/goimports@latest \
   golang.org/x/vuln/cmd/govulncheck@latest \
-  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v${PROTOC_GRPC_GATEWAY} \
-  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v${PROTOC_GRPC_GATEWAY} \
-  google.golang.org/grpc/cmd/protoc-gen-go-grpc@v${PROTOC_GEN_GO_GRPC} \
-  github.com/envoyproxy/protoc-gen-validate@v${PROTOC_GEN_VALIDATE} \
-  google.golang.org/protobuf/cmd/protoc-gen-go@v${PROTOC_GEN_GO} \
   storj.io/drpc/cmd/protoc-gen-go-drpc@v${PROTOC_GEN_DRPC} \
   entgo.io/contrib/entproto/cmd/protoc-gen-ent@v${PROTOC_GEN_ENT}"
 export PATH=/go/bin:${PATH}

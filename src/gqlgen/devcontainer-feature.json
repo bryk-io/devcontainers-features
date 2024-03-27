@@ -1,7 +1,7 @@
 {
   "name": "gqlgen",
   "id": "gqlgen",
-  "version": "0.17.42",
+  "version": "0.17.45",
   "description": "Schema-first GraphQL server library written in Go",
   "documentationURL": "https://gqlgen.com/",
   "licenseURL": "https://github.com/99designs/gqlgen/blob/master/LICENSE",
