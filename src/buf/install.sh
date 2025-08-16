@@ -35,7 +35,7 @@ fi
 echo -e "Activating feature: 'buf'"
 
 # buf
-BUF_VERSION="1.30.0"
+BUF_VERSION="1.56.0"
 echo -e "Installnig buf: $BUF_VERSION"
 curl -sSL \
     "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
@@ -45,7 +45,7 @@ echo -e "Installing protoc plugins"
 # https://github.com/storj/drpc
 PROTOC_GEN_DRPC="0.0.34"
 # https://pkg.go.dev/entgo.io/contrib/entproto/cmd/protoc-gen-ent
-PROTOC_GEN_ENT="0.4.5"
+PROTOC_GEN_ENT="0.7.0"
 GO_TOOLS="\
   golang.org/x/tools/cmd/goimports@latest \
   golang.org/x/vuln/cmd/govulncheck@latest \

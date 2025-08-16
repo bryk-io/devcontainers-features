@@ -1,12 +1,12 @@
 {
   "name": "Buf",
   "id": "buf",
-  "version": "1.30.0",
+  "version": "1.56.0",
   "description": "Tools and plugins useful to compile and work with protocol buffers",
-  "installsAfter": ["ghcr.io/devcontainers/features/go:1"],
+  "installsAfter": [ "ghcr.io/devcontainers/features/go:1" ],
   "customizations": {
     "vscode": {
-      "extensions": ["zxh404.vscode-proto3"]
+      "extensions": [ "zxh404.vscode-proto3" ]
     }
   }
 }
