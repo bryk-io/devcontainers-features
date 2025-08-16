@@ -19,9 +19,9 @@ declared in the [`./src`](./src) directory of this repository.
   "ghcr.io/devcontainers/features/go:1": {
       "version": "1.21"
   },
-  "ghcr.io/bryk-io/devcontainers-features/buf:1.30.0": {},
+  "ghcr.io/bryk-io/devcontainers-features/buf:1.56.0": {},
   "ghcr.io/bryk-io/devcontainers-features/live-share:1": {},
-  "ghcr.io/bryk-io/devcontainers-features/gqlgen:0.17.45": {},
-  "ghcr.io/bryk-io/devcontainers-features/gqlgenc:0.18.0": {}
+  "ghcr.io/bryk-io/devcontainers-features/gqlgen:0.17.78": {},
+  "ghcr.io/bryk-io/devcontainers-features/gqlgenc:0.31.0": {}
 }
 ```

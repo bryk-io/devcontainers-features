@@ -34,7 +34,7 @@ fi
 
 echo -e "Activating feature: 'gqlgenc'"
 echo -e "Installing tools"
-GQLGENC="0.18.0"
+GQLGENC="0.31.0"
 GO_TOOLS="\
   github.com/Yamashou/gqlgenc@v${GQLGENC}"
 export PATH=/go/bin:${PATH}
