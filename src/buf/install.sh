@@ -35,8 +35,8 @@ fi
 echo -e "Activating feature: 'buf'"
 
 # buf
-BUF_VERSION="1.56.0"
-echo -e "Installnig buf: $BUF_VERSION"
+BUF_VERSION="1.58.0"
+echo -e "Installing buf: $BUF_VERSION"
 curl -sSL \
     "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m).tar.gz" | sudo tar -xvzf - -C "/usr/local" --strip-components 1
 
