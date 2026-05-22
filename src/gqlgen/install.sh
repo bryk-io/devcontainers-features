@@ -34,7 +34,7 @@ fi
 
 echo -e "Activating feature: 'gqlgen'"
 echo -e "Installing tools"
-GQLGEN="0.17.81"
+GQLGEN="0.17.89"
 GO_TOOLS="\
   github.com/99designs/gqlgen@v${GQLGEN}"
 export PATH=/go/bin:${PATH}
